@@ -49,11 +49,17 @@ function KareninAlani(kenaruzunlugu) {
 	3. Çemberin çevresi hesaplanacaktır (💡 İPUCU: Çemberin çevresi = 2 * pi * yarıçap)
 	4. Hesaplanan çemberin çevresi döndürülecektir.
 */
+{
+const pi = 3.14;
 
-function CemberinCevresi(/* kodlar buraya */) {
-  /* kodlar buraya */
+function CemberinCevresi(yaricap) {
+    return 2 * pi * yaricap;
 }
 
+const cevre = CemberinCevresi(5);
+console.log(cevre);
+
+}
 /* (Oto test yok) Yukarıdaki CemberinCevresi fonksiyonunu yarıçap = 5 vererek aşağıda çalıştırıp, sonucu konsolda gözlemleyin (console.log)  */
 
 /* 	GÖREV 2:  
@@ -63,11 +69,20 @@ function CemberinCevresi(/* kodlar buraya */) {
 	3. Çemberin alanı hesaplanacaktır (💡 İPUCU: Çemberin alanı = pi * yarıçapın karesi, yarıçapın karesini bulmak için Javascript içinde tanımlı Math kütüphanesini kullanabilirsiniz. Math.pow(yaricap,2))
 	4. Hesaplanan çemberin alanı döndürülecektir.
 */
-
-function CemberinAlani(/* kodlar buraya */) {
-  /* kodlar buraya */
+{
+function CemberinAlani(yaricap, pi) {
+  return pi * Math.pow(yaricap, 2);
 }
 
+const pi = 3.14;
+const yaricap = 15;
+const alan = CemberinAlani(yaricap, pi);
+console.log(alan);
+
+
+
+
+}
 /* (Oto test yok) Yukarıdaki CemberinAlani fonksiyonunu yarıçap = 15 vererek aşağıda çalıştırıp, sonucu konsolda gözlemleyin (console.log)  */
 
 /* 	GÖREV 3:
@@ -98,28 +113,46 @@ let ucetambolunenler,
   tekraredensayilar;
 
 // 3a çözümü
+{
+let enkucuk = sayilar[0];
+let enbuyuk = sayilar[0];
 
-/* kodlar buraya */
-
+for (let i = 1; i < sayilar.length; i++) {
+  if (sayilar[i] < enkucuk) {
+    enkucuk = sayilar[i];
+  }
+  if (sayilar[i] > enbuyuk) {
+    enbuyuk = sayilar[i];
+  }
+}
+}
 // 3b çözümü:
+{
+let ucetambolunenler = [];
 
-/* kodlar buraya */
-
+sayilar.forEach(sayi => {
+  if (sayi % 3 === 0) {
+    ucetambolunenler.push(sayi);
+  }
+});
+}
 // 3c çözümü:
-
-/* kodlar buraya */
-
+{
+let ucebolunenlerintoplami = ucetambolunenler.reduce((a, c) =>a + c );
+}
 // 3d çözümü
-
-/* kodlar buraya */
+{
+let besyuzdenkucuksayilar = sayilar.filter(sayi => sayi < 500);
+}
 
 // 3e çözümü
-
-/* kodlar buraya */
+{
+const siralisayilar = besyuzdenkucuksayilar.sort((a, b) => a - b);
+}
 
 // 3f çözümü
 
-/* kodlar buraya */
+
 
 /*  Bu satırın aşağısındaki kodları lütfen değiştirmeyin  */
 
